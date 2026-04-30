@@ -1,1 +1,3 @@
-# projeto-bloco-2
+# Music-Player
+
+Player de Musica para Treino Front-end
