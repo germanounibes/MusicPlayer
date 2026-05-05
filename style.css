@@ -1,73 +1,69 @@
-*{
-    box-sizing: border-box;
-}
-
 body{
-    height: 100vh;
-    margin: 0;
-    background-image: linear-gradient(0deg, rgb(0, 0, 0));
-    ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    
-}
- h1{
-    color: white;
- }
-
- h4{
-    text-align: center;
-   font-size: 20px;
-   
- }
-
- .music-container{
-   background-color: #0000ff;
-    border-radius: 15px;
-    display: flex;
-    padding: 10px 20px;
-    position: relative;
-    margin: 10px 0;
-    z-index: 10;
- }
-
-.img-container img{
-   border-radius: 15px;
-   width: 300px;
-   height: auto;
-}
-
-.navegation{
    display: flex;
+   flex-direction: column;
    align-items: center;
+   background-color: antiquewhite;
+}
+#cover{
+   height: 50vh;
+   border-radius: 50%;
+}
+div{
+   display: flex;
+   flex-direction: column;
    justify-content: center;
-   z-index: 1;
+   align-items: center;
+}
+/* Container principal - alinha os botões */
+.navigation {
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f2f5; /* Fundo suave */
+  border-radius: 50px;
+  box-shadow: 5px 5px 10px #d1d9e6, -5px -5px 10px #ffffff;
+}
+section{
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
-.action-btn{
-   background-color: #0000ff00;
-   border: 0;
-   color: white;
-   font-size: 20px;
-   cursor: pointer;
-   padding: 5px;
-   margin: 0;
-   
+/* Estilo base dos botões */
+.action-btn {
+  background: #f0f2f5;
+  margin: 1%;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 1.2rem;
+  padding: 15px;
+  border-radius: 50%; /* Botões redondos */
+  box-shadow: 3px 3px 6px #d1d9e6, -3px -3px 6px #ffffff;
+  transition: all 0.3s ease;
+  
+  /* Centralizar ícone dentro do botão */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.action-btn-big{
-color: white;
-font-size: 25px ;
+/* Efeito de hover e clique */
+.action-btn:hover {
+  color: #333;
+  box-shadow: 1px 1px 3px #d1d9e6, -1px -1px 3px #ffffff;
 }
 
-.action-btn:focus {
-   outline: 0;
+.action-btn:active {
+  box-shadow: inset 3px 3px 6px #d1d9e6, inset -3px -3px 6px #ffffff;
 }
 
-body {
-  transition: background-color 1s ease;
+/* Botão de Play maior */
+.action-btn-big {
+  font-size: 1.8rem;
+  padding: 20px;
+  color: #333; /* Cor de destaque */
 }
 
+.action-btn-big:hover {
+  color: #000000;
+}

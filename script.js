@@ -9,12 +9,18 @@ const titulo = document.querySelector('#titulo')
 const cover = document.querySelector('#cover')
 
 const songs = [
-  { name: 'im so blue for you', color: '#0000ff', textColor: '#c8c9ff' },
-  { name: 'Illegal',            color: '#5c1a18', textColor: '#f88884' },
-  { name: 'Orgulho',            color: '#4a2a1a', textColor: '#e7ad8f' },
-  { name: 'See You Again',      color: '#555f22', textColor: '#c8ceac' },
-  { name: 'Hidden in the Sand', color: '#3b3b3b', textColor: '#ffffff' },
-  { name: 'YOASOBI - Racing Into The Night', color: '#ff88d1', textColor: '#003f69' },
+  { name: 'im so blue for you'},
+  { name: 'Illegal'},
+  { name: 'Orgulho'},
+  { name: 'See You Again'},
+  { name: 'Hidden in the Sand'},
+  { name: 'YOASOBI - Racing Into The Night'},
+  { name: 'Touch'},
+  { name: 'Ray Charles - Hit The Road Jack (Official Lyrics Video)'},
+  { name: 'Nada Vai Me Colocar Pra Baixo [MUM239i4o9c]'},
+  { name: 'Mili - Hero'},
+  { name: 'Maça'},
+  { name: 'lavender'},
 ]
 
 let songIndex = 0
