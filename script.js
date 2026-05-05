@@ -1,4 +1,5 @@
 const musicContainer = document.querySelector('.music-container')
+const body = document.body
 const playBtn = document.querySelector('#play')
 const prevBtn = document.querySelector('#prev')
 const nextBtn = document.querySelector('#next')
@@ -9,18 +10,18 @@ const titulo = document.querySelector('#titulo')
 const cover = document.querySelector('#cover')
 
 const songs = [
-  { name: 'im so blue for you'},
-  { name: 'Illegal'},
-  { name: 'Orgulho'},
-  { name: 'See You Again'},
-  { name: 'Hidden in the Sand'},
-  { name: 'YOASOBI - Racing Into The Night'},
-  { name: 'Touch'},
-  { name: 'Ray Charles - Hit The Road Jack (Official Lyrics Video)'},
-  { name: 'Nada Vai Me Colocar Pra Baixo [MUM239i4o9c]'},
-  { name: 'Mili - Hero'},
-  { name: 'Maça'},
-  { name: 'lavender'},
+  { name: 'im so blue for you', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+  { name: 'Illegal', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgb(146, 0, 0))'},
+  { name: 'Orgulho', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+  { name: 'See You Again', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+  { name: 'Hidden in the Sand', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+  { name: 'YOASOBI - Racing Into The Night', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+  { name: 'Touch', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+  { name: 'Ray Charles - Hit The Road Jack (Official Lyrics Video)', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+  { name: 'Nada Vai Me Colocar Pra Baixo [MUM239i4o9c]', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+  { name: 'Mili - Hero', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+  { name: 'Maça', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+  { name: 'lavender', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
 ]
 
 let songIndex = 0
@@ -32,8 +33,7 @@ function loadSong(song) {
     audio.src = `music/${song.name}.mp3`
     cover.src = `images/${song.name}.jpg`
 
-    musicContainer.style.backgroundColor = song.color
-    musicContainer.style.color = song.textColor
+    body.style.backgroundImage = song.gradient;
 }
 
 function playSong() {
