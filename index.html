@@ -12,7 +12,20 @@
 <body>
     <div class="music-container">
         <div class="music-info">
-            <section id="infomusica" class="glassinfo">
+
+            <section id="infomusica" class="glassinfo prev">
+                <div class="img-container">
+                    <img src="" alt="capa da musica" id="coverPrev">
+                </div>
+
+                <h4 id="tituloPrev"></h4>
+
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+            </section>
+
+            <section id="infomusica" class="glassinfo atual">
                 <div class="img-container">
                     <img src="" alt="capa da musica" id="cover">
                 </div>
@@ -23,6 +36,19 @@
                     <div class="progress"></div>
                 </div>
             </section>
+
+            <section id="infomusica" class="glassinfo next>
+                <div class="img-container">
+                    <img src="" alt="capa da musica" id="coverNext">
+                </div>
+
+                <h4 id="tituloNext"></h4>
+
+                <div class="progress-container">
+                    <div class="progress"></div>
+                </div>
+            </section>
+
             <audio id="audio"></audio>
 
             <section class="navegation glassbutton" id="controle">

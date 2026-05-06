@@ -8,6 +8,10 @@ const progress = document.querySelector('.progress')
 const progressContainer = document.querySelector('.progress-container')
 const titulo = document.querySelector('#titulo')
 const cover = document.querySelector('#cover')
+const tituloPrev = document.querySelector('#tituloPrev')
+const coverPrev = document.querySelector('#coverPrev')
+const tituloNext = document.querySelector('#tituloNext')
+const coverNext = document.querySelector('#coverNext')
 
 const songs = [
     /*feito*/{ name: 'im so blue for you', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
@@ -15,10 +19,9 @@ const songs = [
     /*feito*/{ name: 'Orgulho', gradient: 'linear-gradient( rgba(40, 0, 0, 0.8), rgba(146, 95, 0, 0.77))' },
     { name: 'See You Again', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
     { name: 'Hidden in the Sand', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
-    { name: 'YOASOBI - Racing Into The Night', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    { name: 'Racing Into The Night', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
     { name: 'Touch', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
-    { name: 'Ray Charles - Hit The Road Jack (Official Lyrics Video)', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
-    { name: 'Nada Vai Me Colocar Pra Baixo [MUM239i4o9c]', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    { name: 'Hit The Road Jack', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
     { name: 'Mili - Hero', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
     { name: 'Maça', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
     { name: 'lavender', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
@@ -29,9 +32,17 @@ let songIndex = 0
 loadSong(songs[songIndex])
 
 function loadSong(song) {
+    let prevSong = songIndex - 1
+    let nextSong = songIndex + 1
     titulo.innerText = song.name
     audio.src = `music/${song.name}.mp3`
     cover.src = `images/${song.name}.jpg`
+
+    tituloPrev.innerText = song.name
+    coverPrev.src = `images/${song.name}.jpg`
+
+    tituloNext.innerText = song.name
+    coverNext.src = `images/${song.name}.jpg`
 
     body.style.backgroundImage = song.gradient;
 }
