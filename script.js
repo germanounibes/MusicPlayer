@@ -10,18 +10,18 @@ const titulo = document.querySelector('#titulo')
 const cover = document.querySelector('#cover')
 
 const songs = [
-  { name: 'im so blue for you', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
-  { name: 'Illegal', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgb(146, 0, 0))'},
-  { name: 'Orgulho', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
-  { name: 'See You Again', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
-  { name: 'Hidden in the Sand', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
-  { name: 'YOASOBI - Racing Into The Night', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
-  { name: 'Touch', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
-  { name: 'Ray Charles - Hit The Road Jack (Official Lyrics Video)', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
-  { name: 'Nada Vai Me Colocar Pra Baixo [MUM239i4o9c]', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
-  { name: 'Mili - Hero', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
-  { name: 'Maça', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
-  { name: 'lavender', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))'},
+    /*feito*/{ name: 'im so blue for you', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    /*feito*/{ name: 'Illegal', gradient: 'linear-gradient( rgba(40, 36, 0, 0.8), rgb(146, 0, 0))' },
+    /*feito*/{ name: 'Orgulho', gradient: 'linear-gradient( rgba(40, 0, 0, 0.8), rgba(146, 95, 0, 0.77))' },
+    { name: 'See You Again', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    { name: 'Hidden in the Sand', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    { name: 'YOASOBI - Racing Into The Night', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    { name: 'Touch', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    { name: 'Ray Charles - Hit The Road Jack (Official Lyrics Video)', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    { name: 'Nada Vai Me Colocar Pra Baixo [MUM239i4o9c]', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    { name: 'Mili - Hero', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    { name: 'Maça', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    { name: 'lavender', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
 ]
 
 let songIndex = 0
