@@ -17,14 +17,14 @@ const songs = [
     /*feito*/{ name: 'im so blue for you', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
     /*feito*/{ name: 'Illegal', gradient: 'linear-gradient( rgba(40, 36, 0, 0.8), rgb(146, 0, 0))' },
     /*feito*/{ name: 'Orgulho', gradient: 'linear-gradient( rgba(40, 0, 0, 0.8), rgba(146, 95, 0, 0.77))' },
-    { name: 'See You Again', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
-    { name: 'Hidden in the Sand', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
-    { name: 'Racing Into The Night', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
-    { name: 'Touch', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
-    { name: 'Hit The Road Jack', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
-    { name: 'Mili - Hero', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
-    { name: 'Maça', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
-    { name: 'lavender', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 1))' },
+    /*feito*/{ name: 'See You Again', gradient: 'linear-gradient(rgb(146, 78, 0), rgba(11, 133, 0, 0.32))' },
+    /*feito*/{ name: 'Hidden in the Sand', gradient: 'linear-gradient( rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5))' },
+    /*feito*/{ name: 'Racing Into The Night', gradient: 'linear-gradient( rgba(0, 84, 122, 0.8), rgb(146, 0, 61))' },
+    /*feito*/{ name: 'Touch', gradient: 'linear-gradient( rgba(255, 112, 229, 0.5), rgba(255, 255, 255, 0.5))' },
+    /*feito*/{ name: 'Hit The Road Jack', gradient: 'linear-gradient( rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5))' },
+    { name: 'Mili - Hero', gradient: 'linear-gradient( rgba(0, 4, 40, 0.8), rgb(255, 64, 31), rgb(255, 158, 31))' },
+    { name: 'Maça', gradient: 'linear-gradient( rgb(255, 255, 255), rgb(255, 64, 31), rgba(0, 0, 0, 0.5) )' },
+    { name: 'lavender', gradient: 'linear-gradient( rgba(39, 0, 40, 0.8), rgb(253, 194, 253))' },
 ]
 
 let songIndex = 0
