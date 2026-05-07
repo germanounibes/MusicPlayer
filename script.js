@@ -7,7 +7,7 @@ const audio = document.querySelector('#audio')
 const progress = document.querySelector('.progress')
 const progressContainer = document.querySelector('.progress-container')
 const titulo = document.querySelector('#titulo')
-const cover = document.querySelector('#cover')
+const cover = document.querySelector('#coverAtual')
 const tituloPrev = document.querySelector('#tituloPrev')
 const coverPrev = document.querySelector('#coverPrev')
 const tituloNext = document.querySelector('#tituloNext')
@@ -32,17 +32,21 @@ let songIndex = 0
 loadSong(songs[songIndex])
 
 function loadSong(song) {
-    let prevSong = songIndex - 1
-    let nextSong = songIndex + 1
+    const prevIndex = (songIndex - 1 + songs.length) % songs.length
+    const nextIndex = (songIndex + 1) % songs.length
+
+    const prev = songs[prevIndex]
+    const next = songs[nextIndex]
+
     titulo.innerText = song.name
     audio.src = `music/${song.name}.mp3`
     cover.src = `images/${song.name}.jpg`
 
-    tituloPrev.innerText = song.name
-    coverPrev.src = `images/${song.name}.jpg`
+    tituloPrev.innerText = prev.name
+    coverPrev.src = `images/${prev.name}.jpg`
 
-    tituloNext.innerText = song.name
-    coverNext.src = `images/${song.name}.jpg`
+    tituloNext.innerText = next.name
+    coverNext.src = `images/${next.name}.jpg`
 
     body.style.backgroundImage = song.gradient;
 }
@@ -87,20 +91,4 @@ function nextSong() {
     playSong()
 }
 
-audio.addEventListener('timeupdate', updateProgress)
 audio.addEventListener('ended', nextSong)
-
-function updateProgress(e) {
-    const { duration, currentTime } = e.srcElement
-    const progressPercent = (currentTime / duration) * 100
-    progress.style.width = `${progressPercent}%`
-}
-
-progressContainer.addEventListener('click', setProgress)
-
-function setProgress(e) {
-    const width = this.clientWidth
-    const clickX = e.offsetX
-    const duration = audio.duration
-    audio.currentTime = (clickX / width) * duration
-}

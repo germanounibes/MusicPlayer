@@ -1,29 +1,109 @@
+/* Reset e base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.3);
+}
+
 body {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
-  background-size: cover;
-  background-attachment: fixed;
-  transition: all 0.5s ease;
-
-  ::selection {
-    color: rgba(0, 0, 0, 0.8);
-    background: rgba(255, 255, 255, 0.3);
-  }
-}
-
-#cover {
-  height: 20em;
-  margin: 0% 3%;
-  border-radius: 40px;
-}
-
-div {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 255, 0.4));
+  background-color: #1a1a2e;
+  /* fallback */
+}
+
+/* ── Wrapper geral ── */
+.music-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 40%;
+  padding: 2rem;
+}
+
+/* ── Área das músicas ── */
+.music-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* ── Carrossel ── */
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 340px;
+  /* altura fixa para os cards não moverem o layout */
+}
+
+/* ── Cards do carrossel ── */
+.glassinfo {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  padding: 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Card atual — centro, em destaque */
+.glassinfo.atual {
+  z-index: 3;
+  transform: translateX(0) rotate(0deg) scale(1);
+  width: 220px;
+  opacity: 1;
+}
+
+/* Cards laterais — menores e inclinados */
+.glassinfo.prev {
+  z-index: 2;
+  transform: translateX(-150px) rotate(8deg) scale(0.85);
+  opacity: 0.6;
+  width: 180px;
+}
+
+.glassinfo.next {
+  z-index: 2;
+  transform: translateX(150px) rotate(-8deg) scale(0.85);
+  opacity: 0.6;
+  width: 180px;
+}
+
+/* ── Capa da música ── */
+.cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 /* Container principal - alinha os botões */
@@ -44,16 +124,16 @@ div {
 
 /* Estilo base dos botões */
 .action-btn {
-  background: #f0f2f5;
+  background: rgba(255, 255, 255, 0.3);
   margin: 2% 3%;
   border: none;
   cursor: pointer;
-  color: #555;
+  color: rgba(0, 0, 0, 0.6);
   font-size: 1.2rem;
   padding: 20px;
   border-radius: 50%;
   /* Botões redondos */
-  box-shadow: 3px 3px 6px #d1d9e6, -3px -3px 6px #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 
   /* Centralizar ícone dentro do botão */
@@ -64,24 +144,24 @@ div {
 
 /* Efeito de hover e clique */
 .action-btn:hover {
-  color: #333;
-  box-shadow: 1px 1px 3px #d1d9e6, -1px -1px 3px #ffffff;
+  color: rgba(255, 255, 255, 0.5);
+  box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.5);
 }
 
 .action-btn:active {
-  box-shadow: inset 3px 3px 6px #d1d9e6, inset -3px -3px 6px #ffffff;
+  box-shadow: inset 1px 1px 50px rgba(255, 255, 255, 0.2), inset -1px -1px 50px rgba(255, 255, 255, 0.2);
 }
 
 /* Botão de Play maior */
 .action-btn-big {
   font-size: 1.8rem;
-  padding: 20px;
-  color: #333;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.6);
   /* Cor de destaque */
 }
 
 .action-btn-big:hover {
-  color: #000000;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .glassbutton {
@@ -95,35 +175,4 @@ div {
   -webkit-backdrop-filter: blur(10px);
   /* Sombra para profundidade */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.glassinfo {
-  /* Cor de fundo com transparência */
-  background: rgba(255, 255, 255, 0.3);
-  /* O efeito de desfoque (principal) */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  /* Sombra para profundidade */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 6%;
-  border-radius: 50px;
-  padding: 5%;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.6);
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-  font-weight: bolder;
-  font-size: 1.5rem;
-  position: absolute;
-}
-
-.prev{
-  z-index: 2;
-  
-}
-.atual{
-  z-index: 3;
-
-}
-.next{
-  z-index: 2;
 }
